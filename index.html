@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/220fd69bdc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo2.jpg" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p id="pText"> FULLSTACK DEVELOPER </p>
+            <h1 id="h1Text">Hi, I'm <span id="spanText">Rupasri</span><br> From India</h1>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              var pTextElement = document.getElementById('pText');
+              var h1TextElement = document.getElementById('h1Text');
+          
+              function displayAlphabetically(element, callback) {
+                  var content = element.textContent.trim();
+                  element.textContent = ''; // Clear existing content
+                  var index = 0;
+                  function displayCharacter() {
+                      if (index < content.length) {
+                          element.textContent += content[index];
+                          index++;
+                          setTimeout(displayCharacter, 100); // Adjust the timeout for the speed of display
+                      } else {
+                          // Call the callback function when the display is complete
+                          callback();
+                      }
+                  }
+                  displayCharacter();
+              }
+              // First, display pTextElement, and when it's done, display h1TextElement
+              displayAlphabetically(pTextElement, function() {
+                  displayAlphabetically(h1TextElement, function() {
+                      // Any additional code to run after both displays are complete
+                  });
+              });
+          });
+          
+          </script>
+    </div>
+   </div>
+
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/background1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>As a full-stack developer and adept Java programmer, I, at hand demonstrates an exceptional amalgamation of technical acumen and soft skills. Possessing a profound ability for critical and logical thinking, this professional adeptly navigates intricate coding challenges. My excellent communication skills complement their technical prowess, creating a seamless blend of expertise. Responsible and committed, I approach each project with diligence, adding a layer of reliability to their work. My profile reflects a harmonious convergence of intellectual acuity, technical proficiency, and interpersonal finesse—an asset to any endeavor in the dynamic realm of full-stack development.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Andriod/iOS apps</li>
+                        <li><span>AI Induction</span><br>AI and Machine Learning</li>
+                        <li><span>PWA Development</span><br>Progressive Web Apps </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="certifications">
+                    <ul>
+                        <li><span>Infosys SpringBoard : </span> Basics of Python<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                        <li><span>Coursera : </span> Data Analytics <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                        <li><span>NPTEL : </span> Programming In Java <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                        <li><span>NPTEL : </span> Software Testing (IIITB) <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                        <li><span>Cisco Packet Tracer <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                        <li><span>Infosys SpringBoard : </span> Primer Certification in AI & ML <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a><br></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025</span><br>Sona College Of Technology</li>
+                        <li><span>2019-2020</span><br>St.Joseph's Mat.Hr School</li>
+                        <li><span>2018</span><br>Cluny Vidya Nikethan (CBSE)</li>
+                    </ul>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/project-1.jpg" >
+                <div class="layer">
+                    <h2>Marriage Hall Booking System</h2>
+                    <p>Revolutionize event planning with our online marriage hall booking system. Seamlessly browse, book, and manage venues for unforgettable celebrations. Elevate the user experience with intuitive design and efficient reservation features.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/project-2.jpg" >
+                <div class="layer">
+                    <h2>Health-Care Chat Bot</h2>
+                    Empower healthcare conversations with our innovative chat bot app. Providing instant medical assistance, personalized health information, and appointment scheduling, it enhances patient engagement.
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+            <P><i class="fa-solid fa-phone-volume"></i>0123456789</P>
+            <div class="social-icons">
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-square-whatsapp"></i></a>
+            </div>
+            <a href="Images/my-cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email"required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Made with <i class="fa-solid fa-heart"></i> by Rupasri</p>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxqRTeBQ0ficmFeGwx9jV149Plw3wqlmouzkYY4DGxIpqK90z85xxQnI9aikraXrR4T/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = " "
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</html>
